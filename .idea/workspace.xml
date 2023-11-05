@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="769a492a-0b33-40e4-a153-bbb0a27814d3" name="Changes" comment="imenik">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Imenik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imenik.java" afterDir="false" />
+    <list default="true" id="769a492a-0b33-40e4-a153-bbb0a27814d3" name="Changes" comment="main">
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699207747073</updated>
-      <workItem from="1699207748742" duration="3290000" />
+      <workItem from="1699207748742" duration="3715000" />
     </task>
     <task id="LOCAL-00001" summary="telbroj">
       <option name="closed" value="true" />
@@ -120,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699209231530</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="main">
+      <option name="closed" value="true" />
+      <created>1699211227593</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699211227593</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +140,7 @@
     <MESSAGE value="mob" />
     <MESSAGE value="telbrojcomparator" />
     <MESSAGE value="imenik" />
-    <option name="LAST_COMMIT_MESSAGE" value="imenik" />
+    <MESSAGE value="main" />
+    <option name="LAST_COMMIT_MESSAGE" value="main" />
   </component>
 </project>

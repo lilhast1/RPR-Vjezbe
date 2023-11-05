@@ -29,6 +29,8 @@ public class Main {
         imenik.dodaj("Kuca", f);
         imenik.dodaj("Almir", m);
         imenik.dodaj("Tarik", i);
+        System.out.println(imenik.dajBroj("Tarik"));
+        System.out.println(imenik.naSlovo('K'));
 
     }
 }

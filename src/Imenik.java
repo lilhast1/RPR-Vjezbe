@@ -14,7 +14,7 @@ public class Imenik {
         int i = 1; StringBuilder s = new StringBuilder();
         for (var p : imenik.entrySet()) {
             if (p.getKey().charAt(0) == c) {
-                String t = "" + i + "." + p.getKey() + " " + p.getValue().ispisi() + "/n";
+                String t = "" + i + "." + p.getKey() + " " + p.getValue().ispisi() + "\n";
                 s.append(t);
                 i += 1;
             }
