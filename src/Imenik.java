@@ -30,7 +30,11 @@ public class Imenik {
         return gradjani;
     }
     public Set<TelefonskiBroj> izGradaBrojevi(Grad g) {
-        var grd = g.toString();
-        
+        Set<TelefonskiBroj> s = new TreeSet<>(new TelefonskiBrojComparator());
+        for (var p : imenik.entrySet()) {
+            if (p.getValue().ispisi().contains(g.toString()))
+                s.add(p.getValue());
+        }
+        return s;
     }
 }

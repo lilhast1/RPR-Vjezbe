@@ -4,7 +4,7 @@ public enum Grad {
     GORAZDE("038"), TRAVNIK("030"), LIVNO("034"),
     SIROKI_BRIJEG("039"), BRCKO("049");
     public String name;
-    private Grad(String name) { this.name = name; }
+    Grad(String name) { this.name = name; }
     @Override public String toString() { return this.name; }
 }
 
