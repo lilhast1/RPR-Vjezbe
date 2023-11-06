@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="769a492a-0b33-40e4-a153-bbb0a27814d3" name="Changes" comment="naslovo fix">
+    <list default="true" id="769a492a-0b33-40e4-a153-bbb0a27814d3" name="Changes" comment="testovi">
+      <change afterPath="$PROJECT_DIR$/src/BijelaKuga.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Imenik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Imenik.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ImenikTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ImenikTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699207747073</updated>
       <workItem from="1699207748742" duration="4956000" />
-      <workItem from="1699254530660" duration="2665000" />
+      <workItem from="1699254530660" duration="3447000" />
     </task>
     <task id="LOCAL-00001" summary="telbroj">
       <option name="closed" value="true" />
@@ -181,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699257969487</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="testovi">
+      <option name="closed" value="true" />
+      <created>1699258891445</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699258891445</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +210,7 @@
     <MESSAGE value="imenik .naSlovo /n u pravo" />
     <MESSAGE value="junit" />
     <MESSAGE value="naslovo fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="naslovo fix" />
+    <MESSAGE value="testovi" />
+    <option name="LAST_COMMIT_MESSAGE" value="testovi" />
   </component>
 </project>

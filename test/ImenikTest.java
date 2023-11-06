@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,7 +41,7 @@ class ImenikTest {
     }
 
     @Test
-    void izGradaBrojevi() {
+    void izGradaBrojevi() throws BijelaKuga {
         FiksniBroj f = new FiksniBroj(Grad.SARAJEVO, "710-000");
         Imenik imenik = new Imenik();
         imenik.dodaj("Azra", f);
@@ -50,10 +51,26 @@ class ImenikTest {
         imenik.dodaj("Maja", f);
         f = new FiksniBroj(Grad.MOSTAR, "333-333");
         imenik.dodaj("Zdravko Maminjo Mamic", f);
-        var g = imenik.izGradaBrojevi(Grad.MOSTAR);
+        Set<TelefonskiBroj> g;
+        assertDoesNotThrow( () -> imenik.izGradaBrojevi(Grad.MOSTAR));
+        g = imenik.izGradaBrojevi(Grad.MOSTAR);
         Iterator<TelefonskiBroj> it = g.iterator();
         assertEquals("036/222-222", it.next().ispisi());
         assertEquals("036/333-333", it.next().ispisi());
         assert(!it.hasNext());
+    }
+    @Test
+    void izGradaBrojeviThrows() {
+        FiksniBroj f = new FiksniBroj(Grad.SARAJEVO, "710-000");
+        Imenik imenik = new Imenik();
+        imenik.dodaj("Azra", f);
+        f = new FiksniBroj(Grad.BIHAC, "111-111");
+        imenik.dodaj("Mirza", f);
+        f = new FiksniBroj(Grad.MOSTAR, "222-222");
+        imenik.dodaj("Maja", f);
+        f = new FiksniBroj(Grad.MOSTAR, "333-333");
+        imenik.dodaj("Zdravko Maminjo Mamic", f);
+        Set<TelefonskiBroj> g;
+        assertThrows(BijelaKuga.class, () -> imenik.izGradaBrojevi(Grad.BRCKO));
     }
 }

@@ -29,12 +29,14 @@ public class Imenik {
         }
         return gradjani;
     }
-    public Set<TelefonskiBroj> izGradaBrojevi(Grad g) {
+    public Set<TelefonskiBroj> izGradaBrojevi(Grad g) throws BijelaKuga {
         Set<TelefonskiBroj> s = new TreeSet<>(new TelefonskiBrojComparator());
         for (var p : imenik.entrySet()) {
             if (p.getValue().ispisi().contains(g.toString()))
                 s.add(p.getValue());
         }
+        if (s.size() == 0)
+            throw new BijelaKuga("Vidjela sam grad bez ljudi");
         return s;
     }
 }
