@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="769a492a-0b33-40e4-a153-bbb0a27814d3" name="Changes" comment="imenik .naSlovo /n u pravo">
-      <change afterPath="$PROJECT_DIR$/test/FiksniBrojTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ImenikTest.java" afterDir="false" />
+    <list default="true" id="769a492a-0b33-40e4-a153-bbb0a27814d3" name="Changes" comment="naslovo fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETFTelefonskiImenik.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ETFTelefonskiImenik.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ImenikTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ImenikTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699207747073</updated>
       <workItem from="1699207748742" duration="4956000" />
-      <workItem from="1699254530660" duration="1580000" />
+      <workItem from="1699254530660" duration="2665000" />
     </task>
     <task id="LOCAL-00001" summary="telbroj">
       <option name="closed" value="true" />
@@ -167,7 +165,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699211577255</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="junit">
+      <option name="closed" value="true" />
+      <created>1699257944883</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699257944883</updated>
+    </task>
+    <task id="LOCAL-00011" summary="naslovo fix">
+      <option name="closed" value="true" />
+      <created>1699257969487</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699257969487</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +198,8 @@
     <MESSAGE value="imenik" />
     <MESSAGE value="main" />
     <MESSAGE value="imenik .naSlovo /n u pravo" />
-    <option name="LAST_COMMIT_MESSAGE" value="imenik .naSlovo /n u pravo" />
+    <MESSAGE value="junit" />
+    <MESSAGE value="naslovo fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="naslovo fix" />
   </component>
 </project>
