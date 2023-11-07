@@ -6,22 +6,16 @@ import java.util.TreeSet;
 
 // Posto nije Maven projekat napraviti cu svoj mock rucno, ali ubuduce ce
 // sve biti radjeno mockitom
-public class ImenikMock extends Imenik{
+public class ImenikMock extends TestImenikMock{
     private HashMap<String, String> imenik;
     //private Imenik realImenik;
-    private TelefonskiBroj decode(String str) {
-        if (str.charAt(0) == '+')
-            return new MedunarodniBroj(str.substring(0, 3), str.substring(3));
-        if (str.charAt(1) == '6') {
-            int m = Integer.parseInt(str.substring(1, 3));
-            return new MobilniBroj(m, str.substring(3));
-        }
-        Grad g = Grad.values()[str.charAt(2)];
-        return new FiksniBroj(g, str.substring(3));
+    public ImenikMock() {
+        imenik = new HashMap<>();
     }
+
     public void dodaj(String Ime, String broj) {
         imenik.put(Ime, broj);
-        TelefonskiBroj t = decode(broj);
+        //TelefonskiBroj t = decode(broj);
         //realImenik.dodaj(Ime, t);
     }
     public String dajBroj(String Ime) {

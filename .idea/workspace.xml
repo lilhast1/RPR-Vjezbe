@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="769a492a-0b33-40e4-a153-bbb0a27814d3" name="Changes" comment="kraj programa">
-      <change afterPath="$PROJECT_DIR$/src/ETF/imenik/ImenikMock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ETF/imenik/ImenikMockTest.java" afterDir="false" />
+    <list default="true" id="769a492a-0b33-40e4-a153-bbb0a27814d3" name="Changes" comment="vratio poentu mocka prethodna iteracija je sardzala da mock uporedo zove pravu i poredi to, onda sam samo mogao pravu zvati jel">
+      <change afterPath="$PROJECT_DIR$/src/ETF/imenik/TestImenikMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ETF/imenik/TestImenikMockTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ETF/imenik/Grad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETF/imenik/Grad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ETF/imenik/ImenikMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ETF/imenik/ImenikMock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in ETFTelefonskiImenik">
     <configuration name="All in ETFTelefonskiImenik" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ETFTelefonskiImenik" />
       <option name="PACKAGE_NAME" value="" />
@@ -86,9 +86,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ETF.imenik in ETFTelefonskiImenik" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ETFTelefonskiImenik" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ETF.imenik.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ETF.imenik" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in ETFTelefonskiImenik" />
+        <item itemvalue="JUnit.ETF.imenik in ETFTelefonskiImenik" />
       </list>
     </recent_temporary>
   </component>
@@ -104,7 +119,7 @@
       <workItem from="1699254530660" duration="5494000" />
       <workItem from="1699360653587" duration="19000" />
       <workItem from="1699361627931" duration="1967000" />
-      <workItem from="1699370312265" duration="7382000" />
+      <workItem from="1699370312265" duration="9528000" />
     </task>
     <task id="LOCAL-00001" summary="telbroj">
       <option name="closed" value="true" />
@@ -258,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699374690308</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="mock imenika">
+      <option name="closed" value="true" />
+      <created>1699377803248</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699377803248</updated>
+    </task>
+    <task id="LOCAL-00021" summary="vratio poentu mocka prethodna iteracija je sardzala da mock uporedo zove pravu i poredi to, onda sam samo mogao pravu zvati jel">
+      <option name="closed" value="true" />
+      <created>1699378101814</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699378101814</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +315,8 @@
     <MESSAGE value="package fixes" />
     <MESSAGE value="opcije za main" />
     <MESSAGE value="kraj programa" />
-    <option name="LAST_COMMIT_MESSAGE" value="kraj programa" />
+    <MESSAGE value="mock imenika" />
+    <MESSAGE value="vratio poentu mocka prethodna iteracija je sardzala da mock uporedo zove pravu i poredi to, onda sam samo mogao pravu zvati jel" />
+    <option name="LAST_COMMIT_MESSAGE" value="vratio poentu mocka prethodna iteracija je sardzala da mock uporedo zove pravu i poredi to, onda sam samo mogao pravu zvati jel" />
   </component>
 </project>
