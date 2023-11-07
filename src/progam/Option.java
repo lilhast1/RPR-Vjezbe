@@ -5,7 +5,7 @@ import ETF.imenik.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Option {
+public class Option { //niz referenci na funktore bi bio bolji
     TelefonskiBroj t;
     ArrayList<Imenik> imeniks;
     Scanner scn;
@@ -101,7 +101,7 @@ public class Option {
                 System.out.println(i);
         } else if (op == 4) {
             System.out.println("Iz grada: ");
-            int g = scn.nextInt(); scn.nextLine();
+            int g = scn.nextInt(); scn.nextLine(); //ovo je bomba koja samo ceka da je zaboravim
             try {
                 var s = imeniks.get(imen - 1).izGradaBrojevi(Grad.values()[g]);
                 for (var i : s)
