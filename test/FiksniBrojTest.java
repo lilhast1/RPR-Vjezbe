@@ -1,5 +1,9 @@
 import static org.junit.jupiter.api.Assertions.*;
+
+import ETF.imenik.FiksniBroj;
 import org.junit.jupiter.api.Test;
+import ETF.imenik.Grad;
+
 class FiksniBrojTest {
 
     @Test

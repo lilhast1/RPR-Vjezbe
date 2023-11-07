@@ -1,3 +1,7 @@
+package ETF.imenik;
+
+import ETF.imenik.TelefonskiBroj;
+
 import java.util.Comparator;
 public class TelefonskiBrojComparator implements  Comparator<TelefonskiBroj>{
     @Override

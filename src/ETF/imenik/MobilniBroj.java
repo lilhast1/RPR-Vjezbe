@@ -1,3 +1,7 @@
+package ETF.imenik;
+
+import ETF.imenik.TelefonskiBroj;
+
 public class MobilniBroj extends TelefonskiBroj {
     private String broj, mreza;
     MobilniBroj(int mreza, String broj) {

@@ -1,3 +1,5 @@
+package ETF.imenik;
+
 public enum Grad {
     SARAJEVO("033"), TUZLA("035"), ZENICA("032"),
     MOSTAR("036"), BIHAC("037"), ORASJE("031"),

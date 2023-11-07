@@ -1,3 +1,5 @@
+package ETF.imenik;
+
 public class FiksniBroj extends TelefonskiBroj {
     private String grad;
     private String broj;

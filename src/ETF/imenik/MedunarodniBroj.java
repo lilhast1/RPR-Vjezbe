@@ -1,4 +1,8 @@
-public class MedunarodniBroj extends TelefonskiBroj{
+package ETF.imenik;
+
+import ETF.imenik.TelefonskiBroj;
+
+public class MedunarodniBroj extends TelefonskiBroj {
     private String drzava, broj;
     public MedunarodniBroj(String drzava, String broj) {
         this.drzava = drzava; this.broj = broj;

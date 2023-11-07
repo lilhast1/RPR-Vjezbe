@@ -1,3 +1,10 @@
+package ETF.imenik;
+
+import ETF.imenik.BijelaKuga;
+import ETF.imenik.Grad;
+import ETF.imenik.TelefonskiBroj;
+import ETF.imenik.TelefonskiBrojComparator;
+
 import java.util.HashMap;
 import java.util.Set;
 import java.util.TreeSet;
