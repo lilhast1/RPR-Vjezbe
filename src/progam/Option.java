@@ -8,6 +8,10 @@ import java.util.Scanner;
 public class Option {
     TelefonskiBroj t;
     ArrayList<Imenik> imeniks;
+    Scanner scn;
+    public Option(Scanner s) {
+        scn = s;
+    }
     public void call(int option) {
         switch (option) {
             case 1: inputBroj();
@@ -29,7 +33,7 @@ public class Option {
                 3 - Medjunarodni 
                 """);
         int tip;
-        var scn = new Scanner(System.in);
+        //var scn = new Scanner(System.in);
         tip = scn.nextInt();
         if (tip == 1) {
             System.out.print("Unesi grad:");
@@ -59,7 +63,7 @@ public class Option {
     }
     public void dodajImenik() {
         System.out.println("Koji od " + imeniks.size() + " imenika?");
-        var scn = new Scanner(System.in);
+        //var scn = new Scanner(System.in);
         int imen = scn.nextInt(); scn.nextLine();
         System.out.println("Ime?");
         String ime = scn.nextLine();
@@ -71,7 +75,7 @@ public class Option {
     }
     public void nadImenik() {
         System.out.println("Koji od " + imeniks.size() + " imenika?");
-        var scn = new Scanner(System.in);
+        //var scn = new Scanner(System.in);
         int imen = scn.nextInt(); scn.nextLine();
         System.out.println("""
                 Opciju izaberite:
