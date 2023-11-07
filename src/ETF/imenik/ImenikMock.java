@@ -8,7 +8,7 @@ import java.util.TreeSet;
 // sve biti radjeno mockitom
 public class ImenikMock extends Imenik{
     private HashMap<String, String> imenik;
-    private Imenik realImenik;
+    //private Imenik realImenik;
     private TelefonskiBroj decode(String str) {
         if (str.charAt(0) == '+')
             return new MedunarodniBroj(str.substring(0, 3), str.substring(3));
@@ -22,11 +22,11 @@ public class ImenikMock extends Imenik{
     public void dodaj(String Ime, String broj) {
         imenik.put(Ime, broj);
         TelefonskiBroj t = decode(broj);
-        realImenik.dodaj(Ime, t);
+        //realImenik.dodaj(Ime, t);
     }
     public String dajBroj(String Ime) {
-        if (!imenik.get(Ime).equals(realImenik.dajBroj(Ime)))
-            return "";
+//        if (!imenik.get(Ime).equals(realImenik.dajBroj(Ime)))
+//            return "";
         return imenik.get(Ime);
     }
     public String naSlovo(char c) {
@@ -38,37 +38,38 @@ public class ImenikMock extends Imenik{
                 i += 1;
             }
         }
-        var real = realImenik.naSlovo(c);
-        if (real.contentEquals(s))
-            return s.toString();
+//        var real = realImenik.naSlovo(c);
+//        if (real.contentEquals(s))
+//            return s.toString();
         return "";
     }
     public Set<String> izGrada(Grad g) {
         Set<String> gradjani = new TreeSet<>();
-        var real = realImenik.izGrada(g);
+        //var real = realImenik.izGrada(g);
         for (var p : imenik.entrySet()) {
             if (p.getValue().contains(g.toString()))
                 gradjani.add(p.getKey());
         }
-        for (String p : gradjani) {
-            if (!real.contains(p))
-                return null;
-        }
+//        for (String p : gradjani) {
+//            if (!real.contains(p))
+//                return null;
+//        }
         return gradjani;
     }
 
     public Set<String> isGradaBrojevi(Grad g) throws BijelaKuga {
         Set<String> s = new TreeSet<>();
-        var real = realImenik.izGradaBrojevi(g);
+        //var real = realImenik.izGradaBrojevi(g);
         for (var p : imenik.entrySet()) {
             if (p.getValue().contains(g.toString()))
                 s.add(p.getValue());
         }
         if (s.size() == 0)
             throw new BijelaKuga("Vidjela sam grad bez ljudi");
-        for (var p : real)
+        /*for (var p : real)
             if (!s.contains(p.ispisi()))
                 return null;
+        */
         return s;
     }
 }
