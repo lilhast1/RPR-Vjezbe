@@ -1,7 +1,7 @@
 package ETF.imenik;
 
 abstract public class TelefonskiBroj {
-    abstract String ispisi();
+    abstract public String ispisi();
     public int hashCode() {
         return super.hashCode();
     }
