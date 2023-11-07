@@ -11,6 +11,7 @@ public class Option { //niz referenci na funktore bi bio bolji
     Scanner scn;
     public Option(Scanner s) {
         scn = s;
+        imeniks = new ArrayList<>();
     }
     public void call(int option) {
         switch (option) {
@@ -68,9 +69,10 @@ public class Option { //niz referenci na funktore bi bio bolji
         System.out.println("Ime?");
         String ime = scn.nextLine();
         System.out.println("Novi broj/zadnji? [1/0]");
-        if (scn.nextInt() == 1)
+        if (scn.nextInt() == 1) {
+            scn.nextLine();
             inputBroj();
-        scn.nextLine();
+        }
         imeniks.get(imen - 1).dodaj(ime, t);
     }
     public void nadImenik() {
