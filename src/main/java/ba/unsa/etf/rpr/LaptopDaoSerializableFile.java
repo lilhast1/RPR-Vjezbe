@@ -6,17 +6,17 @@ import java.util.ArrayList;
 public class LaptopDaoSerializableFile implements LaptopDao {
     private ArrayList<Laptop> laptopi;
     private File file;
-    private ObjectOutputStream out;
-    private ObjectInputStream in;
-    private FileOutputStream fout;
-    private FileInputStream fin;
-    LaptopDaoSerializableFile() throws IOException {
+    private OutputWrapper out;
+    private InputWrapper in;
+    public LaptopDaoSerializableFile() throws IOException {
         file = new File("LaptopDaoSeraizliable" + hashCode() + ".txt");
-        fout = new FileOutputStream(file);
-        fin = new FileInputStream(file);
         laptopi = new ArrayList<>();
-        out = new ObjectOutputStream(fout);
-        in = new ObjectInputStream(fin);
+        out = new OutputWrapper(file);
+        in = new InputWrapper(file);
+    }
+    public LaptopDaoSerializableFile(String p, OutputWrapper o, InputWrapper i) {
+        file = new File(p);
+        out = o; in = i;
     }
     @Override
     public LaptopDao dodajLaptopUListu(Laptop laptop) {
@@ -60,4 +60,5 @@ public class LaptopDaoSerializableFile implements LaptopDao {
     public void ispisi() {
         laptopi.stream().forEach(Laptop::ispisiNaEkran);
     }
+
 }
