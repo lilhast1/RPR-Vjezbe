@@ -31,12 +31,12 @@ public class LaptopDaoSerializableFile implements LaptopDao {
     }
 
     @Override
-    public Laptop getLaptop(String cpu) {
+    public Laptop getLaptop(String cpu) throws NeodgovarajuciProcesorException {
 
         return laptopi.stream()
                 .filter(laptop -> cpu.equals(laptop.getProcesor()))
                 .findFirst()
-                .orElse(null);
+                .orElseThrow(() -> new NeodgovarajuciProcesorException("Nema ga"));
     }
 
     @Override
