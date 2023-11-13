@@ -11,7 +11,7 @@ public class LaptopDaoSerializableFile implements LaptopDao {
     private FileOutputStream fout;
     private FileInputStream fin;
     LaptopDaoSerializableFile() throws IOException {
-        file = new File("LaptopDaoSeraizliable" + hashCode());
+        file = new File("LaptopDaoSeraizliable" + hashCode() + ".txt");
         fout = new FileOutputStream(file);
         fin = new FileInputStream(file);
         laptopi = new ArrayList<>();
