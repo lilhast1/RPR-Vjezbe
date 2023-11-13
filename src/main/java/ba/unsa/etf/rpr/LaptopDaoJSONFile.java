@@ -12,7 +12,7 @@ public class LaptopDaoJSONFile implements LaptopDao {
     private File fileJSON;
     public LaptopDaoJSONFile() {
         laptopi = new ArrayList<>();
-        fileJSON = new File("LaptopJSON" + hashCode() + ".json");
+        fileJSON = null;
     }
     @Override
     public LaptopDao dodajLaptopUListu(Laptop laptop) {
@@ -22,9 +22,18 @@ public class LaptopDaoJSONFile implements LaptopDao {
     @Override
     public LaptopDao dodajLaptopUFile(Laptop laptop) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        ArrayList<Laptop> backed = mapper.readValue(fileJSON, new TypeReference<ArrayList<Laptop>>() {});
-        backed.add(laptop);
-        mapper.writeValue(fileJSON, backed);
+        if (fileJSON != null) {
+            ArrayList<Laptop> backed = mapper.readValue(fileJSON, new TypeReference<ArrayList<Laptop>>() {
+            });
+            backed.add(laptop);
+            mapper.writeValue(fileJSON, backed);
+        } else {
+            fileJSON = new File("LaptopJSON" + hashCode() + ".json");
+            ArrayList<Laptop> backed = new ArrayList<>();
+            backed.add(laptop);
+            mapper.writeValue(fileJSON, backed);
+        }
+
         return this;
     }
 
@@ -44,7 +53,10 @@ public class LaptopDaoJSONFile implements LaptopDao {
     @Override
     public void vratiPodatkeIzDatoteke() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
+        if (fileJSON == null) {
+            laptopi = new ArrayList<>();
+            return;
+        }
         laptopi = mapper.readValue(fileJSON, new TypeReference<ArrayList<Laptop>>() {});
-
     }
 }

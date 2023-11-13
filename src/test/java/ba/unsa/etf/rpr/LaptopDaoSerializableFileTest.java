@@ -6,11 +6,10 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LaptopDaoJSONFileTest {
-
+class LaptopDaoSerializableFileTest {
     @Test
     void dodajLaptopUListu() throws IOException, NeodgovarajuciProcesorException {
-        LaptopDao ld = new LaptopDaoJSONFile();
+        LaptopDao ld = new LaptopDaoSerializableFile();
         Laptop l = new Laptop();
         l.setProcesor("Intel i5-8600");
         l.setBrend("Asus");
@@ -29,7 +28,7 @@ class LaptopDaoJSONFileTest {
 
     @Test
     void dodajLaptopUFile() throws IOException, NeodgovarajuciProcesorException {
-        LaptopDao ld = new LaptopDaoJSONFile();
+        LaptopDao ld = new LaptopDaoSerializableFile();
         Laptop l = new Laptop();
         l.setProcesor("Intel i5-8600");
         l.setBrend("Asus");
