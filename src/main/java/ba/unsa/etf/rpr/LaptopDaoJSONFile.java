@@ -1,17 +1,20 @@
 package ba.unsa.etf.rpr;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 
 import java.io.*;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 public class LaptopDaoJSONFile implements LaptopDao {
     private ArrayList<Laptop> laptopi;
     private File fileJSON;
-    private Gson gson;
 
     @Override
     public LaptopDao dodajLaptopUListu(Laptop laptop) {
@@ -21,7 +24,10 @@ public class LaptopDaoJSONFile implements LaptopDao {
     @Override
     public LaptopDao dodajLaptopUFile(Laptop laptop) throws IOException {
         FileWriter in = new FileWriter(fileJSON);
-        gson.toJson(laptop, in);
+        ObjectMapper mapper = new ObjectMapper();
+        ArrayList<Laptop> backed = mapper.readValue(fileJSON, new TypeReference<ArrayList<Laptop>>() {});
+        backed.add(laptop);
+        mapper.writeValue(fileJSON, backed);
         in.close();
         return this;
     }
@@ -40,18 +46,9 @@ public class LaptopDaoJSONFile implements LaptopDao {
     }
 
     @Override
-    public void vratiPodatkeIzDatoteke() {
-        InputStream in = new FileInputStream(fileJSON);
-        JsonReader rdr = Json.createReader() {
-                     JsonObject obj = rdr.readObject();
-                     JsonArray results = obj.getJsonArray("data");
-                     for (JsonObject result : results.getValuesAs(JsonObject.class)) {
-                         System.out.print(result.getJsonObject("from").getString("name"));
-                         System.out.print(": ");
-                         System.out.println(result.getString("message", ""));
-                         System.out.println("-----------");
-                     }
+    public void vratiPodatkeIzDatoteke() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        laptopi = mapper.readValue(fileJSON, new TypeReference<ArrayList<Laptop>>() {});
 
-        Laptop l = new Gson().fromJson(br, Laptop.class);
     }
 }

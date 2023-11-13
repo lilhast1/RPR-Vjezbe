@@ -9,5 +9,5 @@ public interface LaptopDao {
     public LaptopDao dodajLaptopUFile(Laptop laptop) throws IOException;
     public Laptop getLaptop(String cpu);
     public void napuniListu(ArrayList<Laptop> laptops);
-    public void vratiPodatkeIzDatoteke();
+    public void vratiPodatkeIzDatoteke() throws IOException;
 }
