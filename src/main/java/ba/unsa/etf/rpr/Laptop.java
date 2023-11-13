@@ -78,4 +78,11 @@ public class Laptop implements Serializable {
     public void setSsd(int ssd) {
         this.ssd = ssd;
     }
+    public void ispisiNaEkran() {
+        System.out.println("CPU " + procesor + " GPU " + grafickaKartica
+                        + " HDD" + hdd + " SSD " + ssd);
+        System.out.println("Velicina ekrana " + velicinaEkrana);
+        System.out.println("Brend " + brend + " Model " + model);
+        System.out.println("Cijena " + cijena);;
+    }
 }

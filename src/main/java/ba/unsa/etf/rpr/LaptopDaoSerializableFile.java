@@ -14,13 +14,14 @@ public class LaptopDaoSerializableFile implements LaptopDao {
         file = new File("LaptopDaoSeraizliable" + hashCode());
         fout = new FileOutputStream(file);
         fin = new FileInputStream(file);
-        laptopi = null;
+        laptopi = new ArrayList<>();
         out = new ObjectOutputStream(fout);
         in = new ObjectInputStream(fin);
     }
     @Override
     public LaptopDao dodajLaptopUListu(Laptop laptop) {
-        return null;
+        laptopi.add(laptop);
+        return this;
     }
 
     @Override
@@ -55,5 +56,8 @@ public class LaptopDaoSerializableFile implements LaptopDao {
                 throw new RuntimeException(e);
             }
         }
+    }
+    public void ispisi() {
+        laptopi.stream().forEach(Laptop::ispisiNaEkran);
     }
 }
