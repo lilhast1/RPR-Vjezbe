@@ -19,7 +19,7 @@ public class LaptopDaoXMLFile implements LaptopDao {
     File xml;
     LaptopDaoXMLFile()  {
         laptopi = new ArrayList<>();
-        xml = new File("LaptopXML" + hashCode() + ".xml");
+        xml =
     }
     @Override
     public LaptopDao dodajLaptopUListu(Laptop laptop) {
@@ -30,10 +30,18 @@ public class LaptopDaoXMLFile implements LaptopDao {
     @Override
     public LaptopDao dodajLaptopUFile(Laptop laptop) throws IOException {
         XmlMapper mapper = new XmlMapper();
-        ArrayList<Laptop> backed = mapper.readValue(xml, new TypeReference<ArrayList<Laptop>>(){});
-        backed.add(laptop);
-        mapper = new XmlMapper();
-        mapper.writeValue(xml, backed);
+        if (xml != null) {
+            ArrayList<Laptop> backed = mapper.readValue(xml, new TypeReference<ArrayList<Laptop>>() {
+            });
+            backed.add(laptop);
+            mapper = new XmlMapper();
+            mapper.writeValue(xml, backed);
+        } else {
+            xml = new File("LaptopXML" + hashCode() + ".fxml");
+            ArrayList<Laptop> backed = new ArrayList<>();
+            backed.add(laptop);
+            mapper.writeValue(xml, backed);
+        }
         return this;
     }
 
@@ -53,6 +61,11 @@ public class LaptopDaoXMLFile implements LaptopDao {
     @Override
     public void vratiPodatkeIzDatoteke() throws IOException {
         XmlMapper mapper = new XmlMapper();
-        laptopi = mapper.readValue(xml, new TypeReference<ArrayList<Laptop>>(){});
+        if (xml != null) {
+            laptopi = mapper.readValue(xml, new TypeReference<ArrayList<Laptop>>() {
+            });
+            return;
+        }
+        laptopi = new ArrayList<>();
     }
 }
