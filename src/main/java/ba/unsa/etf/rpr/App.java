@@ -12,16 +12,39 @@ public class App {
     public static void main( String[] args ) throws IOException {
         Scanner scn = new Scanner(System.in);
         LaptopDaoSerializableFile ldsf = new LaptopDaoSerializableFile();
+        LaptopDao ldjf = new LaptopDaoJSONFile();
+        LaptopDao ldxf = new LaptopDaoXMLFile();
         while (true) {
             System.out.println("Vrati iz filea ili dodaj u file ili dodaj u list? [V/D/L]");
             String line = scn.nextLine();
-            if (line.contains("V"))
-                ldsf.vratiPodatkeIzDatoteke();
-            else if (line.contains("D"))
-                ldsf.dodajLaptopUFile(App.unesiLaptop(scn));
-            else if (line.contains("L"))
-                ldsf.dodajLaptopUListu(App.unesiLaptop(scn));
-            else
+            if (line.contains("V")) {
+                System.out.println("Serializable/JSON/XML?[S/J/X]");
+                line = scn.nextLine();
+                if (line.contains("S"))
+                    ldsf.vratiPodatkeIzDatoteke();
+                else if (line.contains("J"))
+                    ldjf.vratiPodatkeIzDatoteke();
+                else
+                    ldxf.vratiPodatkeIzDatoteke();
+            } else if (line.contains("D")) {
+                System.out.println("Serializable/JSON/XML?[S/J/X]");
+                line = scn.nextLine();
+                if (line.contains("S"))
+                    ldsf.dodajLaptopUFile(App.unesiLaptop(scn));
+                else if (line.contains("J"))
+                    ldjf.dodajLaptopUFile(App.unesiLaptop(scn));
+                else
+                    ldxf.dodajLaptopUFile(App.unesiLaptop(scn));
+            } else if (line.contains("L")) {
+                System.out.println("Serializable/JSON/XML?[S/J/X]");
+                line = scn.nextLine();
+                if (line.contains("S"))
+                    ldsf.dodajLaptopUListu(App.unesiLaptop(scn));
+                else if (line.contains("J"))
+                    ldjf.dodajLaptopUListu(App.unesiLaptop(scn));
+                else
+                    ldxf.dodajLaptopUListu(App.unesiLaptop(scn));
+            } else
                 break;
         }
         ldsf.ispisi();

@@ -21,12 +21,10 @@ public class LaptopDaoJSONFile implements LaptopDao {
 
     @Override
     public LaptopDao dodajLaptopUFile(Laptop laptop) throws IOException {
-        FileWriter in = new FileWriter(fileJSON);
         ObjectMapper mapper = new ObjectMapper();
         ArrayList<Laptop> backed = mapper.readValue(fileJSON, new TypeReference<ArrayList<Laptop>>() {});
         backed.add(laptop);
         mapper.writeValue(fileJSON, backed);
-        in.close();
         return this;
     }
 
