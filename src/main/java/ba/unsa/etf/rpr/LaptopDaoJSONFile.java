@@ -10,7 +10,10 @@ import java.util.List;
 public class LaptopDaoJSONFile implements LaptopDao {
     private ArrayList<Laptop> laptopi;
     private File fileJSON;
-
+    public LaptopDaoJSONFile() {
+        laptopi = new ArrayList<>();
+        fileJSON = new File("LaptopJSON" + hashCode() + ".json");
+    }
     @Override
     public LaptopDao dodajLaptopUListu(Laptop laptop) {
         laptopi.add(laptop); return this;
