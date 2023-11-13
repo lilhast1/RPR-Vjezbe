@@ -19,7 +19,7 @@ public class LaptopDaoXMLFile implements LaptopDao {
     File xml;
     LaptopDaoXMLFile()  {
         laptopi = new ArrayList<>();
-        xml =
+        xml = null;
     }
     @Override
     public LaptopDao dodajLaptopUListu(Laptop laptop) {
