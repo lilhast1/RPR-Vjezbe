@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr;
 
-public class LicneInformacije {
+public class LicneInformacije implements Informator{
     private String ime, prezime;
 
     public String getIme() {
@@ -17,5 +17,10 @@ public class LicneInformacije {
 
     public void setPrezime(String prezime) {
         this.prezime = prezime;
+    }
+
+    @Override
+    public String predstavi() {
+        return "Moje ime je " + ime + " " + prezime + "/n";
     }
 }
