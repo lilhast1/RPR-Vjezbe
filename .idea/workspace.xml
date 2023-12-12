@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lv7z1/korisnici_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lv7z1/korisnici_form.fxml" afterDir="false" />
+    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="mrzim gui i ne zelim biti developer">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702384845894</updated>
       <workItem from="1702384847127" duration="3222000" />
-      <workItem from="1702388428755" duration="814000" />
+      <workItem from="1702388428755" duration="1259000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -76,7 +76,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702388797939</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mrzim gui i ne zelim biti developer">
+      <option name="closed" value="true" />
+      <created>1702389413500</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702389413501</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="mrzim gui i ne zelim biti developer" />
+    <option name="LAST_COMMIT_MESSAGE" value="mrzim gui i ne zelim biti developer" />
   </component>
 </project>
