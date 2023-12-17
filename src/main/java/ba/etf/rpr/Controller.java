@@ -66,7 +66,7 @@ public class Controller {
     public void add(ActionEvent actionEvent) {
         //model.setCurr(userList.getSelectionModel().getSelectedItem());
         model.add(new Korisnik());
-        model.setCurr(new Korisnik());
+        //model.setCurr(new Korisnik());
     }
 
     public void select(MouseEvent mouseEvent) {
