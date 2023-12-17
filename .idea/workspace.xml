@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="mrzim gui i ne zelim biti developer">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Korisnik.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lv7z1/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lv7z1/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lv7z1/korisni_stil.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ba/etf/rpr/korisni_stil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lv7z1/korisnici_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ba/etf/rpr/korisnici_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,7 +68,8 @@
       <option name="presentableId" value="Default" />
       <updated>1702384845894</updated>
       <workItem from="1702384847127" duration="3222000" />
-      <workItem from="1702388428755" duration="1259000" />
+      <workItem from="1702388428755" duration="1266000" />
+      <workItem from="1702833424963" duration="13551000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -84,7 +95,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702389413501</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mrzim gui i ne zelim biti developer">
+      <option name="closed" value="true" />
+      <created>1702389698609</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702389698609</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,5 +124,15 @@
     <MESSAGE value="init" />
     <MESSAGE value="mrzim gui i ne zelim biti developer" />
     <option name="LAST_COMMIT_MESSAGE" value="mrzim gui i ne zelim biti developer" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.reflect.InvocationTargetException" package="java.lang.reflect" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

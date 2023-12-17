@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane prefHeight="201.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane prefHeight="201.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.rpr.Controller">
     <stylesheets>
         <URL value="@korisni_stil.css" />
     </stylesheets>
@@ -45,49 +45,49 @@
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin></Label>
-      <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="0">
+      <TextField fx:id="imeText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="0">
          <GridPane.margin>
             <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
          </GridPane.margin></TextField>
-       <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1">
+       <TextField fx:id="prezimeText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1">
            <padding>
                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
            </padding>
            <GridPane.margin>
                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
            </GridPane.margin></TextField>
-       <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
+       <TextField fx:id="mailText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
            <padding>
                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
            </padding>
            <GridPane.margin>
                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
            </GridPane.margin></TextField>
-       <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3">
+       <TextField fx:id="usernameText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3">
            <padding>
                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
            </padding>
            <GridPane.margin>
                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
            </GridPane.margin></TextField>
-       <PasswordField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
+       <PasswordField fx:id="lozinkaText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
            <padding>
                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
            </padding>
            <GridPane.margin>
                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
            </GridPane.margin></PasswordField>
-      <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="5">
+      <ListView fx:id="userList"  prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowSpan="5" onMouseClicked="#select">
          <GridPane.margin>
             <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
          </GridPane.margin>
       </ListView>
-      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Dodaj" GridPane.columnIndex="3" GridPane.rowIndex="5">
+      <Button fx:id="addBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#add" text="Dodaj" GridPane.columnIndex="3" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
          </GridPane.margin>
       </Button>
-      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Kraj" GridPane.columnIndex="4" GridPane.rowIndex="5">
+      <Button fx:id="krajBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#end" text="Kraj" GridPane.columnIndex="4" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>

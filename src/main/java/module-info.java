@@ -6,6 +6,6 @@ module com.example.lv7z1 {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.lv7z1 to javafx.fxml;
-    exports com.example.lv7z1;
+    opens ba.etf.rpr to javafx.fxml;
+    exports ba.etf.rpr;
 }
