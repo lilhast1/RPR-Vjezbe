@@ -63,11 +63,6 @@ public class Controller {
                     userList.refresh();
         });
         model.napuni();
-        imeText.textProperty().bindBidirectional(model.getCurr().imeProperty());
-        prezimeText.textProperty().bindBidirectional(model.getCurr().prezimeProperty());
-        mailText.textProperty().bindBidirectional(model.getCurr().emailProperty());
-        lozinkaText.textProperty().bindBidirectional(model.getCurr().lozinkaProperty());
-        usernameText.textProperty().bindBidirectional(model.getCurr().userNameProperty());
         //model.setCurr(new Korisnik());
     }
 
