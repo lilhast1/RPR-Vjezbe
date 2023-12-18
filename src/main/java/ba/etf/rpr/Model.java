@@ -14,7 +14,12 @@ public class Model {
     public ObservableList<Korisnik> getKorisnici() {
         return korisnici;
     }
-
+    public void napuni() {
+        korisnici.add(new Korisnik("tarik","hastor","thastor1@etf.unsa.ba","lilhast1","sifra"));
+        korisnici.add(new Korisnik("jasmin","fazlagic","imperia@gmail.com","jalabrat","123456"));
+        korisnici.add(new Korisnik("amar","hodzic","ahodzic1@gmail.com","bubacorelli","sifra2"));
+        korisnici.add(new Korisnik("natasa","bekvalac","nikotin@gmail.com","nbekvlc","sifra"));
+    }
     public void setKorisnici(ObservableList<Korisnik> korisnici) {
         this.korisnici = korisnici;
     }

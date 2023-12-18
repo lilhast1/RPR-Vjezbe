@@ -48,12 +48,13 @@ public class Controller {
                         usernameText.textProperty().bindBidirectional(next.userNameProperty());
                     } else {
                         //next = new Korisnik();
-                        imeText.textProperty().bindBidirectional(next.imeProperty());
-                        prezimeText.textProperty().bindBidirectional(next.prezimeProperty());
-                        mailText.textProperty().bindBidirectional(next.emailProperty());
-                        lozinkaText.textProperty().bindBidirectional(next.lozinkaProperty());
-                        usernameText.textProperty().bindBidirectional(next.userNameProperty());
+                        imeText.setText("");
+                        prezimeText.setText("");
+                        mailText.setText("");
+                        lozinkaText.setText("");
+                        usernameText.setText("");
                     }
+                    userList.refresh();
                 }
         );
         userList.getSelectionModel().selectedItemProperty().addListener(
@@ -61,6 +62,12 @@ public class Controller {
                     model.setCurr(newKorisnik);
                     userList.refresh();
         });
+        model.napuni();
+        imeText.textProperty().bindBidirectional(model.getCurr().imeProperty());
+        prezimeText.textProperty().bindBidirectional(model.getCurr().prezimeProperty());
+        mailText.textProperty().bindBidirectional(model.getCurr().emailProperty());
+        lozinkaText.textProperty().bindBidirectional(model.getCurr().lozinkaProperty());
+        usernameText.textProperty().bindBidirectional(model.getCurr().userNameProperty());
         //model.setCurr(new Korisnik());
     }
 
@@ -72,10 +79,13 @@ public class Controller {
     public void add(ActionEvent actionEvent) {
         //model.setCurr(userList.getSelectionModel().getSelectedItem());
         model.add(new Korisnik());
+        userList.refresh();
+        userList.getSelectionModel().select(model.getCurr());
         //model.setCurr(new Korisnik());
     }
 
     public void select(MouseEvent mouseEvent) {
         model.find(userList.getSelectionModel().getSelectedItem());
+        userList.refresh();
     }
 }
