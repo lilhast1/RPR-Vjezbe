@@ -22,6 +22,7 @@ public class Controller {
 
     @FXML
     public void initialize() {
+        imeText.textProperty().bindBidirectional(model.getCurr().imeProperty());
         userList.setItems(model.getKorisnici());
         //userList.itemsProperty().bind(model.getKorisnici());
         System.out.println("OK");
@@ -55,6 +56,11 @@ public class Controller {
                     }
                 }
         );
+        userList.getSelectionModel().selectedItemProperty().addListener(
+                (obs, oldKorisnik, newKorisnik) -> {
+                    model.setCurr(newKorisnik);
+                    userList.refresh();
+        });
         //model.setCurr(new Korisnik());
     }
 

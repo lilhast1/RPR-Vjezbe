@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="...........">
+    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="ne kontam">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Controller.java" afterDir="false" />
     </list>
@@ -61,7 +61,8 @@
       <updated>1702384845894</updated>
       <workItem from="1702384847127" duration="3222000" />
       <workItem from="1702388428755" duration="1266000" />
-      <workItem from="1702833424963" duration="14307000" />
+      <workItem from="1702833424963" duration="14324000" />
+      <workItem from="1702923284095" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -103,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702851112014</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ne kontam">
+      <option name="closed" value="true" />
+      <created>1702851839839</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702851839839</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +133,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="mrzim gui i ne zelim biti developer" />
     <MESSAGE value="..........." />
-    <option name="LAST_COMMIT_MESSAGE" value="..........." />
+    <MESSAGE value="ne kontam" />
+    <option name="LAST_COMMIT_MESSAGE" value="ne kontam" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
