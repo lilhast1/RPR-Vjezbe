@@ -19,6 +19,7 @@ public class Model {
         korisnici.add(new Korisnik("jasmin","fazlagic","imperia@gmail.com","jalabrat","123456"));
         korisnici.add(new Korisnik("amar","hodzic","ahodzic1@gmail.com","bubacorelli","sifra2"));
         korisnici.add(new Korisnik("natasa","bekvalac","nikotin@gmail.com","nbekvlc","sifra"));
+        curr.set(korisnici.get(3));
     }
     public void setKorisnici(ObservableList<Korisnik> korisnici) {
         this.korisnici = korisnici;
@@ -36,8 +37,8 @@ public class Model {
         this.curr.set(curr);
     }
     public void add(Korisnik k) {
-
             korisnici.add(k);
+            curr.set(korisnici.get(korisnici.size() - 1));
     }
 
     public void find(Korisnik k) {
