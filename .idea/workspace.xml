@@ -4,11 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="jhghjjf">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ba/etf/rpr/HelloApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ba/etf/rpr/ModelTest.java" afterDir="false" />
+    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="jhghjjfdsfa">
+      <change afterPath="$PROJECT_DIR$/lib/TestFxUtils-2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/assertj-core-3.13.2-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/assertj-core-3.13.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hamcrest-2.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hamcrest-2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-2.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-base-14.0.1-mac.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-base-14.0.1-win.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-base-14.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-controls-14.0.1-mac.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-controls-14.0.1-win.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-controls-14.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-graphics-14.0.1-mac.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-graphics-14.0.1-win.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javafx-graphics-14.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-4.13-beta-3-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-4.13-beta-3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.5.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.5.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/org.osgi.core-6.0.0-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/org.osgi.core-6.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testfx-core-4.0.16-alpha.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testfx-core-4.0.17-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testfx-core-4.0.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testfx-junit-4.0.17-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testfx-junit-4.0.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testfx-junit5-4.0.16-alpha.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ba/etf/rpr/ControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Model.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +70,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -53,6 +87,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
@@ -78,7 +115,8 @@
       <workItem from="1702833424963" duration="14324000" />
       <workItem from="1702923284095" duration="675000" />
       <workItem from="1702931716791" duration="2370000" />
-      <workItem from="1702989619940" duration="3272000" />
+      <workItem from="1702989619940" duration="3280000" />
+      <workItem from="1703005718034" duration="1158000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -152,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702933965306</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="jhghjjfdsfa">
+      <option name="closed" value="true" />
+      <created>1702994281784</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702994281784</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,13 +216,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="mrzim gui i ne zelim biti developer" />
     <MESSAGE value="..........." />
     <MESSAGE value="ne kontam" />
     <MESSAGE value="backend" />
     <MESSAGE value="jhghjjf" />
-    <option name="LAST_COMMIT_MESSAGE" value="jhghjjf" />
+    <MESSAGE value="jhghjjfdsfa" />
+    <option name="LAST_COMMIT_MESSAGE" value="jhghjjfdsfa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
