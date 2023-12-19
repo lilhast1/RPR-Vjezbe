@@ -4,40 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="jhghjjfdsfa">
-      <change afterPath="$PROJECT_DIR$/lib/TestFxUtils-2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/assertj-core-3.13.2-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/assertj-core-3.13.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hamcrest-2.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hamcrest-2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-2.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-base-14.0.1-mac.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-base-14.0.1-win.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-base-14.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-controls-14.0.1-mac.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-controls-14.0.1-win.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-controls-14.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-graphics-14.0.1-mac.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-graphics-14.0.1-win.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javafx-graphics-14.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-4.13-beta-3-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-4.13-beta-3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.5.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.5.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/org.osgi.core-6.0.0-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/org.osgi.core-6.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testfx-core-4.0.16-alpha.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testfx-core-4.0.17-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testfx-core-4.0.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testfx-junit-4.0.17-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testfx-junit-4.0.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testfx-junit5-4.0.16-alpha.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ba/etf/rpr/ControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="dodat testfx">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/HelloApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +85,7 @@
       <workItem from="1702923284095" duration="675000" />
       <workItem from="1702931716791" duration="2370000" />
       <workItem from="1702989619940" duration="3280000" />
-      <workItem from="1703005718034" duration="1158000" />
+      <workItem from="1703005718034" duration="1562000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -198,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702994281784</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="dodat testfx">
+      <option name="closed" value="true" />
+      <created>1703006891452</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703006891452</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +201,8 @@
     <MESSAGE value="backend" />
     <MESSAGE value="jhghjjf" />
     <MESSAGE value="jhghjjfdsfa" />
-    <option name="LAST_COMMIT_MESSAGE" value="jhghjjfdsfa" />
+    <MESSAGE value="dodat testfx" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodat testfx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

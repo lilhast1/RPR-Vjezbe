@@ -18,8 +18,10 @@ public class Controller {
     public TextField imeText;
     @FXML
     private Label welcomeText;
-    private Model model = new Model();
-
+    private Model model;
+    public Controller(Model model) {
+        this.model = model;
+    }
     @FXML
     public void initialize() {
         imeText.textProperty().bindBidirectional(model.getCurr().imeProperty());
