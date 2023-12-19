@@ -85,4 +85,10 @@ public class Controller {
         model.find(userList.getSelectionModel().getSelectedItem());
         userList.refresh();
     }
+    public Model getModel() {
+        return model;
+    }
+    public void setModel(Model model) {
+        this.model = model;
+    }
 }

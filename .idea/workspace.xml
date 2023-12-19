@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="dodat testfx">
+    <list default="true" id="e9bb464f-1071-4fed-b863-c72d91bfbab9" name="Changes" comment="DependecyInjection uspjesan!">
+      <change afterPath="$PROJECT_DIR$/lib/guava-14.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hamcrest-all-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-4.10.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testFx-3.1.2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/etf/rpr/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ba/etf/rpr/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ba/etf/rpr/ControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +46,9 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.Annotations": "true",
     "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "true",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -57,8 +62,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
@@ -70,6 +75,28 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ba.etf.rpr" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lv7-z1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.etf.rpr.ControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ControllerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,7 +112,7 @@
       <workItem from="1702923284095" duration="675000" />
       <workItem from="1702931716791" duration="2370000" />
       <workItem from="1702989619940" duration="3280000" />
-      <workItem from="1703005718034" duration="1562000" />
+      <workItem from="1703005718034" duration="4142000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -175,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703006891452</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="DependecyInjection uspjesan!">
+      <option name="closed" value="true" />
+      <created>1703007420007</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703007420007</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +237,8 @@
     <MESSAGE value="jhghjjf" />
     <MESSAGE value="jhghjjfdsfa" />
     <MESSAGE value="dodat testfx" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodat testfx" />
+    <MESSAGE value="DependecyInjection uspjesan!" />
+    <option name="LAST_COMMIT_MESSAGE" value="DependecyInjection uspjesan!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
