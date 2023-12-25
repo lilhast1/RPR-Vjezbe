@@ -12,7 +12,7 @@ public class GeografijaDAO {
     private Connection connection;
     private String url;
     private PreparedStatement gradoviQuery, glGradQuery, drzavaQuery, deleteDrzavaQuery, alterGradQuery,
-            addGradQuery, addDrzavaQuery;
+            addGradQuery, addDrzavaQuery, getDrzavaIDQuery;
     private GeografijaDAO() throws SQLException, FileNotFoundException {
         //init bazu
         url = "jdbc:sqlite:" + System.getProperty("user.host") + ".geografija.db";
@@ -24,16 +24,20 @@ public class GeografijaDAO {
             generate();
             test.execute("SELECT * FROM gradovi CROSS JOIN drzave");
         }
-        gradoviQuery = connection.prepareStatement("SELECT * FROM gradovi ORDER BY broj_stanovnika DESC");
-        glGradQuery = connection.prepareStatement("SELECT  g.* FROM gradovi g, drzave d " +
-                " WHERE d.naziv = ? and d.glavni_grad = g.id");
-        drzavaQuery = connection.prepareStatement("SELECT * FROM drzave WHERE naziv = ?");
+        gradoviQuery = connection.prepareStatement("SELECT id, naziv, broj_stanovnika, drzava FROM " +
+                                                    "gradovi ORDER BY broj_stanovnika DESC");
+        glGradQuery = connection.prepareStatement(
+                "SELECT  g.id, g.naziv, g.broj_stanovnika, g.drzava" +
+                        " FROM gradovi g, drzave d " + " WHERE d.naziv = ? and d.glavni_grad = g.id"
+        );
+        drzavaQuery = connection.prepareStatement("SELECT id, naziv, glavni_grad FROM drzave WHERE naziv = ?");
         deleteDrzavaQuery = connection.prepareStatement("DELETE FROM drzave WHERE naziv = ?");
         alterGradQuery = connection.prepareStatement("UPDATE gradovi SET naziv = ?, broj_stanovnika = ?," +
                 " drzava = ? WHERE id = ?");
         addGradQuery = connection.prepareStatement("INSERT INTO gradovi(naziv, broj_stanovnika, drzava) " +
                 "VALUES (?,?,?)");
         addDrzavaQuery = connection.prepareStatement("INSERT INTO drzave(naziv, glavni_grad) VALUES (?,?)");
+        getDrzavaIDQuery = connection.prepareStatement("SELECT id, naziv, glavni_grad FROM drzave WHERE id = ?");
     }
     public static GeografijaDAO getInstance() throws SQLException, FileNotFoundException {
         if (instance == null)
@@ -107,6 +111,11 @@ public class GeografijaDAO {
         return new Drzava(result.getInt(1), result.getInt(3),
                 result.getString(2));
     }
-
+    public String getDrzavaNaziv(int id) throws SQLException {
+        getDrzavaIDQuery.setInt(1, id);
+        ResultSet res = getDrzavaIDQuery.executeQuery();
+        res.next();
+        return res.getString(2);
+    }
 }
 

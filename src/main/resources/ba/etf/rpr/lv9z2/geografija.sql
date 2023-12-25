@@ -1,15 +1,15 @@
 BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS "Gradovi" (
                                          "id"	INTEGER,
+                                         "naziv"	TEXT,
                                          "broj_stanovnika"	INTEGER,
                                          "drzava"	INTEGER,
-                                         "naziv"	TEXT,
                                          FOREIGN KEY("drzava") REFERENCES "Drzave"("id")
     );
 CREATE TABLE IF NOT EXISTS "Drzave" (
                                         "id"	INTEGER,
-                                        "glavni_grad"	INTEGER,
                                         "naziv"	TEXT,
+                                        "glavni_grad"	INTEGER,
                                         PRIMARY KEY("id")
     );
 INSERT INTO "Gradovi" VALUES (1,2102650,1,'Pariz');
