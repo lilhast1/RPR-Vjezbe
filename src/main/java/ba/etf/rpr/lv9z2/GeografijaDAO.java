@@ -115,7 +115,8 @@ public class GeografijaDAO {
         getDrzavaIDQuery.setInt(1, id);
         ResultSet res = getDrzavaIDQuery.executeQuery();
         res.next();
-        return res.getString(2);
+            return res.getString(2);
+        //return null;
     }
 }
 
