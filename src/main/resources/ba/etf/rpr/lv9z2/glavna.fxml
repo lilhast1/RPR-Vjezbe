@@ -56,7 +56,7 @@
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
        </padding>
      </Button>
-     <Button fx:id="btnIzmijeniGrad" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Izmijeni grad" GridPane.columnIndex="4" GridPane.rowIndex="3">
+     <Button fx:id="btnIzmijeniGrad" onAction="#gradAkcija" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Izmijeni grad" GridPane.columnIndex="4" GridPane.rowIndex="3">
        <GridPane.margin>
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
        </GridPane.margin>
@@ -64,7 +64,7 @@
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
        </padding>
      </Button>
-     <Button fx:id="btnObrisiGrad" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Obrisi grad" GridPane.columnIndex="4" GridPane.rowIndex="4">
+     <Button fx:id="btnObrisiGrad" onAction="#gradAkcija" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Obrisi grad" GridPane.columnIndex="4" GridPane.rowIndex="4">
        <GridPane.margin>
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
        </GridPane.margin>

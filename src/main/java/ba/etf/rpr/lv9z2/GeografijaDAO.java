@@ -25,7 +25,7 @@ public class GeografijaDAO {
     private Connection connection;
     private String url;
     private PreparedStatement gradoviQuery, glGradQuery, drzavaQuery, deleteDrzavaQuery, alterGradQuery,
-            addGradQuery, addDrzavaQuery, getDrzavaIDQuery, sveQuery;
+            addGradQuery, addDrzavaQuery, getDrzavaIDQuery, sveQuery, findGrad, sveDrzave;
     private GeografijaDAO() throws SQLException, FileNotFoundException {
         //init bazu
 
@@ -54,6 +54,8 @@ public class GeografijaDAO {
         getDrzavaIDQuery = connection.prepareStatement("SELECT id, naziv, glavni_grad FROM drzave WHERE id = ?");
         sveQuery = connection.prepareStatement("SELECT g.id, g.naziv, " +
                 "g.broj_stanovnika, d.naziv drzava from gradovi g, drzave d where g.drzava = d.id");
+        findGrad = connection.prepareStatement("SELECT naziv from gradovi where naziv = ?");
+        sveDrzave = connection.prepareStatement("SELECT * from drzave");
         gradFXES = getAll();
     }
     public static GeografijaDAO getInstance() throws SQLException, FileNotFoundException {
@@ -157,6 +159,22 @@ public class GeografijaDAO {
             ));
         }
         return gradovi;
+    }
+
+    public boolean findGrad(String naziv) throws SQLException {
+        findGrad.setString(1, naziv);
+        ResultSet r =  findGrad.executeQuery();
+        return r.next();
+    }
+
+    public ObservableList<DrzavaFX> getDrzavaFXES() throws SQLException {
+        ObservableList<DrzavaFX> drzavaFXES = FXCollections.observableArrayList();
+        ResultSet res = sveDrzave.executeQuery();
+        while(res.next()) {
+            drzavaFXES.add(new DrzavaFX( res.getInt("id"), res.getInt("glavni_grad"),
+                    res.getString("naziv")));
+        }
+        return drzavaFXES;
     }
 }
 

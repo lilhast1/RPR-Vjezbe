@@ -50,4 +50,13 @@ public class GlavniController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void gradAkcija(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(GeografijaApp.class.getResource("gradovi.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 300, 100);
+        stage.setTitle("Gradovi");
+        stage.setScene(scene);
+        stage.show();
+    }
 }
