@@ -13,7 +13,8 @@ public class Main {
         if (geografija == null)
             geografija = GeografijaDAO.getInstance();
     }
-    public static void main(String[] args) throws SQLException, FileNotFoundException {
+    public static void main(String[] args) throws SQLException, FileNotFoundException, ClassNotFoundException {
+
         geografija = GeografijaDAO.getInstance();
         scn =  new Scanner(System.in);
         System.out.println( ispisiGradove() );

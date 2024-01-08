@@ -12,6 +12,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GeografijaDAO {
+    public ObservableList<GradFX> getGradFXES() {
+        return gradFXES;
+    }
+
+    public void setGradFXES(ObservableList<GradFX> gradFXES) {
+        this.gradFXES = gradFXES;
+    }
+
+    private ObservableList<GradFX> gradFXES;
     private static GeografijaDAO instance;
     private Connection connection;
     private String url;
@@ -19,6 +28,7 @@ public class GeografijaDAO {
             addGradQuery, addDrzavaQuery, getDrzavaIDQuery, sveQuery;
     private GeografijaDAO() throws SQLException, FileNotFoundException {
         //init bazu
+
         url = "jdbc:sqlite:" + System.getProperty("user.host") + ".geografija.db";
         connection = DriverManager.getConnection(url);
         Statement test = connection.createStatement();
@@ -28,7 +38,7 @@ public class GeografijaDAO {
             generate();
             test.execute("SELECT * FROM gradovi CROSS JOIN drzave");
         }
-        gradoviQuery = connection.prepareStatement("SELECT id, nAziv, broj_sTanovnika, drzava FROM " +
+        gradoviQuery = connection.prepareStatement("SELECT id, naziv, broj_stanovnika, drzava FROM " +
                                                     "gradovi ORDER BY broj_stanovnika DESC");
         glGradQuery = connection.prepareStatement(
                 "SELECT  g.id, g.naziv, g.broj_stanovnika, g.drzava" +
@@ -44,6 +54,7 @@ public class GeografijaDAO {
         getDrzavaIDQuery = connection.prepareStatement("SELECT id, naziv, glavni_grad FROM drzave WHERE id = ?");
         sveQuery = connection.prepareStatement("SELECT g.id, g.naziv, " +
                 "g.broj_stanovnika, d.naziv from gradovi g, drzave d where g.drzava = d.id");
+        gradFXES = getAll();
     }
     public static GeografijaDAO getInstance() throws SQLException, FileNotFoundException {
         if (instance == null)
@@ -84,8 +95,8 @@ public class GeografijaDAO {
         ArrayList<Grad> gradovi = new ArrayList<>();
         while (resultSet.next()) {
             gradovi.add(new Grad(
-                    resultSet.getInt("ID"), resultSet.getInt(3),
-                    resultSet.getInt(4), resultSet.getString("NazIv")
+                    resultSet.getInt("id"), resultSet.getInt("broj_stanovnika"),
+                    resultSet.getInt("drzava"), resultSet.getString("NazIv")
             ));
         }
         return gradovi;
@@ -125,7 +136,7 @@ public class GeografijaDAO {
         //return null;
     }
 
-    public ObservableList<GradFX> getDrzave() throws SQLException {
+    public ObservableList<GradFX> getAll() throws SQLException {
         ObservableList<GradFX> gradObservableList = FXCollections.observableArrayList();
         ResultSet res = sveQuery.executeQuery();
         while (res.next()) {
