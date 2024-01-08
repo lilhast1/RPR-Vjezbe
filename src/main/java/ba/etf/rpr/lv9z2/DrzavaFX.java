@@ -52,4 +52,9 @@ public class DrzavaFX {
         this.idGlavniGrad = new SimpleIntegerProperty(idGlavniGrad);
         this.naziv = new SimpleStringProperty(naziv);
     }
+
+    @Override
+    public String toString() {
+        return getNaziv();
+    }
 }

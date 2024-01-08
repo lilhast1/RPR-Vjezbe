@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS "Gradovi" (
                                          "naziv"	TEXT,
                                          "broj_stanovnika"	INTEGER,
                                          "drzava"	INTEGER,
-                                         FOREIGN KEY("drzava") REFERENCES "Drzave"("id")
+                                         CONSTRAINT drzodgrd FOREIGN KEY("drzava") REFERENCES "Drzave"("id")
     );
 CREATE TABLE IF NOT EXISTS "Drzave" (
                                         "id"	INTEGER,

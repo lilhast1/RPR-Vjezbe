@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -22,18 +23,19 @@ public class GlavniController {
     public TableColumn<GradFX, String> colGradNaziv;
     public TableColumn<GradFX, Integer> colGradStanovnika;
     public TableColumn<GradFX, String> colGradDrzava;
+    public ObservableList<GradFX> gradFXES;
     @FXML
     private Label welcomeText;
     @FXML
     public void initialize() throws SQLException, FileNotFoundException {
         geografijaDAO = GeografijaDAO.getInstance(); // drzim model
-
+       // geografijaDAO.reset();
         colGradId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colGradNaziv.setCellValueFactory(new PropertyValueFactory<>("naziv"));
         colGradStanovnika.setCellValueFactory(new PropertyValueFactory<>("brojStanovnika"));
         colGradDrzava.setCellValueFactory(new PropertyValueFactory<>("idDrzava"));
-
-        tableViewGradovi.setItems(geografijaDAO.getGradFXES()); // table vezem za bazu
+        gradFXES = geografijaDAO.getGradFXES();
+        tableViewGradovi.setItems(gradFXES); // table vezem za bazu
         // zavrseno vezanje baza<->tableview
     }
 
@@ -44,8 +46,11 @@ public class GlavniController {
 
     public void dodajDrzavu(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(GeografijaApp.class.getResource("drzava.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 300, 100);
+        DrzavaController controller = new DrzavaController();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("drzava.fxml"));
+        fxmlLoader.setController(controller);
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root, 300, 100);
         stage.setTitle("Drzava");
         stage.setScene(scene);
         stage.show();
@@ -53,10 +58,15 @@ public class GlavniController {
 
     public void gradAkcija(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(GeografijaApp.class.getResource("gradovi.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 300, 100);
+        GradoviController controller = new GradoviController();
+        controller.setGradovi(gradFXES);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gradovi.fxml"));
+        fxmlLoader.setController(controller);
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root, 300, 100);
         stage.setTitle("Gradovi");
         stage.setScene(scene);
         stage.show();
     }
+
 }

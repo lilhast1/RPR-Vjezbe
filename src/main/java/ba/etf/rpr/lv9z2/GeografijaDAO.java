@@ -2,7 +2,6 @@ package ba.etf.rpr.lv9z2;
 
 //import com.almasb.fxgl.net.Connection;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 
 import java.io.FileInputStream;
@@ -25,7 +24,7 @@ public class GeografijaDAO {
     private Connection connection;
     private String url;
     private PreparedStatement gradoviQuery, glGradQuery, drzavaQuery, deleteDrzavaQuery, alterGradQuery,
-            addGradQuery, addDrzavaQuery, getDrzavaIDQuery, sveQuery, findGrad, sveDrzave;
+            addGradQuery, addDrzavaQuery, getDrzavaIDQuery, sveQuery, findGrad, sveDrzave, findGradId;
     private GeografijaDAO() throws SQLException, FileNotFoundException {
         //init bazu
 
@@ -54,8 +53,9 @@ public class GeografijaDAO {
         getDrzavaIDQuery = connection.prepareStatement("SELECT id, naziv, glavni_grad FROM drzave WHERE id = ?");
         sveQuery = connection.prepareStatement("SELECT g.id, g.naziv, " +
                 "g.broj_stanovnika, d.naziv drzava from gradovi g, drzave d where g.drzava = d.id");
-        findGrad = connection.prepareStatement("SELECT naziv from gradovi where naziv = ?");
+        findGrad = connection.prepareStatement("SELECT * from gradovi where naziv = ?");
         sveDrzave = connection.prepareStatement("SELECT * from drzave");
+
         gradFXES = getAll();
     }
     public static GeografijaDAO getInstance() throws SQLException, FileNotFoundException {
@@ -109,6 +109,7 @@ public class GeografijaDAO {
         addGradQuery.setInt(2, grad.getBrojStanovnika());
         addGradQuery.setInt(3, grad.getIdDrzava());
         addGradQuery.execute();
+
     }
     public void dodajDrzavu(Drzava drzava) throws SQLException {
         addDrzavaQuery.setString(1, drzava.getNaziv());
@@ -121,6 +122,7 @@ public class GeografijaDAO {
         alterGradQuery.setInt(3, grad.getIdDrzava());
         alterGradQuery.setInt(4, grad.getId());
         alterGradQuery.execute();
+
     }
     public Drzava nadjiDrzavu(String Drzava) throws SQLException {
         drzavaQuery.setString(1, Drzava);
@@ -150,23 +152,30 @@ public class GeografijaDAO {
     }
 
     public ObservableList<GradFX> gradoviFX() throws SQLException {
-        ResultSet resultSet = sveQuery.executeQuery();
-        ObservableList<GradFX> gradovi = FXCollections.observableArrayList();
-        while (resultSet.next()) {
-            gradovi.add(new GradFX(
-                    resultSet.getInt("id"), resultSet.getString("NazIv"),
-                    resultSet.getInt("broj_stanovnika"), resultSet.getString("drzava")
-            ));
-        }
-        return gradovi;
+            ResultSet resultSet = sveQuery.executeQuery();
+            gradFXES = FXCollections.observableArrayList();
+            while (resultSet.next()) {
+                gradFXES.add(new GradFX(
+                        resultSet.getInt("id"), resultSet.getString("NazIv"),
+                        resultSet.getInt("broj_stanovnika"), resultSet.getString("drzava")
+                ));
+            }
+        return gradFXES;
     }
 
-    public boolean findGrad(String naziv) throws SQLException {
+    public boolean hasGrad(String naziv) throws SQLException {
         findGrad.setString(1, naziv);
         ResultSet r =  findGrad.executeQuery();
-        return r.next();
+        return  r.next();
     }
-
+    public Grad findGrad(String naziv) throws SQLException {
+        findGrad.setString(1, naziv);
+        ResultSet r =  findGrad.executeQuery();
+        if (!r.next())
+            return null;
+        return  new Grad(r.getInt("id"), r.getInt("broj_stanovnika"),
+                r.getInt("drzava"), r.getString("naziv"));
+    }
     public ObservableList<DrzavaFX> getDrzavaFXES() throws SQLException {
         ObservableList<DrzavaFX> drzavaFXES = FXCollections.observableArrayList();
         ResultSet res = sveDrzave.executeQuery();
@@ -175,6 +184,15 @@ public class GeografijaDAO {
                     res.getString("naziv")));
         }
         return drzavaFXES;
+    }
+
+    public void reset() throws SQLException, FileNotFoundException {
+        //connection.prepareStatement("ALTER TABLE gradovi DROP CONSTRAINT drzodgrd").executeQuery();
+        PreparedStatement g = connection.prepareStatement("Delete gradovi");
+        PreparedStatement d = connection.prepareStatement("Delete DRZAVE");
+        g.executeQuery();
+        d.executeQuery();
+        generate();
     }
 }
 
