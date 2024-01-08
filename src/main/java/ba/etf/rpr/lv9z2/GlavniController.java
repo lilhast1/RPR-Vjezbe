@@ -30,8 +30,6 @@ public class GlavniController {
 
         tableViewGradovi.setItems(geografijaDAO.getGradFXES()); // table vezem za bazu
         // zavrseno vezanje baza<->tableview
-
-        
     }
 
     @FXML
