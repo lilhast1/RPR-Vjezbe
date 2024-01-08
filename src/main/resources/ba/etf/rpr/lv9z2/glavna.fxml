@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.etf.rpr.lv9z2.GlavniController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="120.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="120.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="120.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="480.0" minWidth="10.0" prefWidth="120.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="120.0" />
+
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+  </rowConstraints>
+   <children>
+      <TableView fx:id="tableViewGradovi" prefHeight="120.0" prefWidth="344.0" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="4"
+                 layoutX="120.0" layoutY="128.0" >
+
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+          <columns>
+              <TableColumn fx:id="colGradId" prefWidth="75.0" text="ID" />
+              <TableColumn fx:id="colGradNaziv" prefWidth="75.0" text="Naziv" />
+              <TableColumn fx:id="colGradStanovnika" prefWidth="75.0" text="Stanovnika" />
+              <TableColumn fx:id="colGradDrzava" prefWidth="150.0" text="Drzava" />
+          </columns>
+      </TableView>
+      <Button fx:id="btnDodajGrad" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Dodaj grad" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+     <Button fx:id="btnDodajDrzavu" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Dodaj drzavu" GridPane.columnIndex="4" GridPane.rowIndex="2">
+       <GridPane.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+       </GridPane.margin>
+       <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+       </padding>
+     </Button>
+     <Button fx:id="btnIzmijeniGrad" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Izmijeni grad" GridPane.columnIndex="4" GridPane.rowIndex="3">
+       <GridPane.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+       </GridPane.margin>
+       <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+       </padding>
+     </Button>
+     <Button fx:id="btnObrisiGrad" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Obrisi grad" GridPane.columnIndex="4" GridPane.rowIndex="4">
+       <GridPane.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+       </GridPane.margin>
+       <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+       </padding>
+     </Button>
+   </children>
+</GridPane>

@@ -1,6 +1,10 @@
 package ba.etf.rpr.lv9z2;
 
 //import com.almasb.fxgl.net.Connection;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.*;
@@ -12,7 +16,7 @@ public class GeografijaDAO {
     private Connection connection;
     private String url;
     private PreparedStatement gradoviQuery, glGradQuery, drzavaQuery, deleteDrzavaQuery, alterGradQuery,
-            addGradQuery, addDrzavaQuery, getDrzavaIDQuery;
+            addGradQuery, addDrzavaQuery, getDrzavaIDQuery, sveQuery;
     private GeografijaDAO() throws SQLException, FileNotFoundException {
         //init bazu
         url = "jdbc:sqlite:" + System.getProperty("user.host") + ".geografija.db";
@@ -24,20 +28,22 @@ public class GeografijaDAO {
             generate();
             test.execute("SELECT * FROM gradovi CROSS JOIN drzave");
         }
-        gradoviQuery = connection.prepareStatement("SELECT id, naziv, broj_stanovnika, drzava FROM " +
+        gradoviQuery = connection.prepareStatement("SELECT id, nAziv, broj_sTanovnika, drzava FROM " +
                                                     "gradovi ORDER BY broj_stanovnika DESC");
         glGradQuery = connection.prepareStatement(
                 "SELECT  g.id, g.naziv, g.broj_stanovnika, g.drzava" +
                         " FROM gradovi g, drzave d " + " WHERE d.naziv = ? and d.glavni_grad = g.id"
         );
-        drzavaQuery = connection.prepareStatement("SELECT id, naziv, glavni_grad FROM drzave WHERE naziv = ?");
+        drzavaQuery = connection.prepareStatement("SELECT id, Naziv, glavni_grad FROM drzave WHERE naziv = ?");
         deleteDrzavaQuery = connection.prepareStatement("DELETE FROM drzave WHERE naziv = ?");
         alterGradQuery = connection.prepareStatement("UPDATE gradovi SET naziv = ?, broj_stanovnika = ?," +
                 " drzava = ? WHERE id = ?");
-        addGradQuery = connection.prepareStatement("INSERT INTO gradovi(naziv, broj_stanovnika, drzava) " +
+        addGradQuery = connection.prepareStatement("INSERT INTO gradovi(Naziv, broj_stanovnika, drzava) " +
                 "VALUES (?,?,?)");
-        addDrzavaQuery = connection.prepareStatement("INSERT INTO drzave(naziv, glavni_grad) VALUES (?,?)");
+        addDrzavaQuery = connection.prepareStatement("INSERT INTO drzave(Naziv, glavni_grad) VALUES (?,?)");
         getDrzavaIDQuery = connection.prepareStatement("SELECT id, naziv, glavni_grad FROM drzave WHERE id = ?");
+        sveQuery = connection.prepareStatement("SELECT g.id, g.naziv, " +
+                "g.broj_stanovnika, d.naziv from gradovi g, drzave d where g.drzava = d.id");
     }
     public static GeografijaDAO getInstance() throws SQLException, FileNotFoundException {
         if (instance == null)
@@ -78,8 +84,8 @@ public class GeografijaDAO {
         ArrayList<Grad> gradovi = new ArrayList<>();
         while (resultSet.next()) {
             gradovi.add(new Grad(
-                    resultSet.getInt(1), resultSet.getInt(3),
-                    resultSet.getInt(4), resultSet.getString(2)
+                    resultSet.getInt("ID"), resultSet.getInt(3),
+                    resultSet.getInt(4), resultSet.getString("NazIv")
             ));
         }
         return gradovi;
@@ -115,8 +121,19 @@ public class GeografijaDAO {
         getDrzavaIDQuery.setInt(1, id);
         ResultSet res = getDrzavaIDQuery.executeQuery();
         res.next();
-            return res.getString(2);
+        return res.getString(2);
         //return null;
+    }
+
+    public ObservableList<GradFX> getDrzave() throws SQLException {
+        ObservableList<GradFX> gradObservableList = FXCollections.observableArrayList();
+        ResultSet res = sveQuery.executeQuery();
+        while (res.next()) {
+            gradObservableList.add(new GradFX(res.getInt(1), res.getString(2),
+                                res.getInt(3), res.getString(4)));
+
+        }
+        return gradObservableList;
     }
 }
 
