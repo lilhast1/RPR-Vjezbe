@@ -48,7 +48,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </Button>
-     <Button fx:id="btnDodajDrzavu" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Dodaj drzavu" GridPane.columnIndex="4" GridPane.rowIndex="2">
+     <Button fx:id="btnDodajDrzavu" onAction="#dodajDrzavu" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Dodaj drzavu" GridPane.columnIndex="4" GridPane.rowIndex="2">
        <GridPane.margin>
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
        </GridPane.margin>

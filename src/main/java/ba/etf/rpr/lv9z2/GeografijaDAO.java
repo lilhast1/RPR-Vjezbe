@@ -53,7 +53,7 @@ public class GeografijaDAO {
         addDrzavaQuery = connection.prepareStatement("INSERT INTO drzave(Naziv, glavni_grad) VALUES (?,?)");
         getDrzavaIDQuery = connection.prepareStatement("SELECT id, naziv, glavni_grad FROM drzave WHERE id = ?");
         sveQuery = connection.prepareStatement("SELECT g.id, g.naziv, " +
-                "g.broj_stanovnika, d.naziv from gradovi g, drzave d where g.drzava = d.id");
+                "g.broj_stanovnika, d.naziv drzava from gradovi g, drzave d where g.drzava = d.id");
         gradFXES = getAll();
     }
     public static GeografijaDAO getInstance() throws SQLException, FileNotFoundException {
@@ -145,6 +145,18 @@ public class GeografijaDAO {
 
         }
         return gradObservableList;
+    }
+
+    public ObservableList<GradFX> gradoviFX() throws SQLException {
+        ResultSet resultSet = sveQuery.executeQuery();
+        ObservableList<GradFX> gradovi = FXCollections.observableArrayList();
+        while (resultSet.next()) {
+            gradovi.add(new GradFX(
+                    resultSet.getInt("id"), resultSet.getString("NazIv"),
+                    resultSet.getInt("broj_stanovnika"), resultSet.getString("drzava")
+            ));
+        }
+        return gradovi;
     }
 }
 

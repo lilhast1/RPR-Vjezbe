@@ -72,4 +72,8 @@ public class GradFX {
         this.idDrzava = new SimpleStringProperty(Drzava);
         this.naziv = new SimpleStringProperty(naziv);
     }
+    @Override
+    public String toString() {
+        return getNaziv();
+    }
 }
